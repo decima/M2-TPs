@@ -34,8 +34,8 @@ test("test valeur negatives",2, function(){
     ok(function(){new money(1,"EUR");},"it works");
     throws(
         function(){new money(-1,"EUR");},
-        negativeValueExeption,
-        "negative value forbidden.");
+        ValeurNegativeExc,
+        "Valeur négative");
 
 });
 test("test devise sans bon format", function(){
@@ -43,15 +43,15 @@ test("test devise sans bon format", function(){
     ok(function(){new money(1,"EUR");},"valeur attendue");
     throws(
         function(){new money(1,"EURO");},
-        currencyFormatExeption,
+        DeviseFormatExc,
         ">3 caractères interdis.");
     throws(
         function(){new money(1,"E UR");},
-        currencyFormatExeption,
+        DeviseFormatExc,
         "espaces interdis.");
     throws(
         function(){new money(1,"EU");},
-        currencyFormatExeption,
+        DeviseFormatExc,
         "caractères < 3.");
     ok(function(){new money(1,"   EUR  ");},"espaces en début et fin de devise ignorés");
 

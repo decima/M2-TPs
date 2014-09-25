@@ -7,23 +7,28 @@ DevisesIncompatibleExc.prototype.toString=function (){
 		return "Devises incompatibles : "+d1+" vs "+d2;
 }
 
-/**
- * negativeValueExeption
- * @param i - objet money levant l'exception
- */
-function negativeValueExeption(i){
+
+function ValeurNegativeExc(i){
     this._i=i;
 }
 
-negativeValueExeption.prototype.toString=function(){
-    return "no negative values allowed "+this._i;
+ValeurNegativeExc.prototype.toString=function(){
+    return "Valeur négative : "+this._i;
 };
 
 
-function currencyFormatExeption(i){
+function DeviseFormatExc(i){
     this._i=i;
 }
 
-currencyFormatExeption.prototype.toString=function(){
-    return "currency value unsupported "+this._i;
+DeviseFormatExc.prototype.toString=function(){
+    return "Format de devise invalide : "+this._i;
 };
+
+function SoustractionNegativeExc(_d1) {
+	this.d1=_d1;
+}
+
+SoustractionNegativeExc.prototype.toString=function(){
+	return "Soustraction négative : "+d1;
+}

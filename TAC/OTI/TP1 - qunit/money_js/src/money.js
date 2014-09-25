@@ -5,9 +5,9 @@ var money=function(v,curr) {
 	this.v=v;
 	this.curr=curr;
     if(curr.length!=3)
-        throw new currencyFormatExeption(this);
+        throw new DeviseFormatExc(this);
     if(v<0)
-        throw new negativeValueExeption(this);
+        throw new ValeurNegativeExc(this);
 }
 
 money.prototype.getCurrency=
