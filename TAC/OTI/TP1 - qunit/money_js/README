@@ -1,0 +1,18 @@
+Florent PEYSSON
+Henri LARGET
+
+Ajout des exceptions
+	- ValeurNegativeExc
+	- DeviseFormatExc
+	- SoustractionNegativeExc
+	
+Ajout de la fonction sub(m1,m2)
+
+Ajout des tests
+	- test simple sub
+	- test multi devise sub
+	- test negative sub
+	- test construct money
+	- test accesseurs
+	- test valeur negatives
+	- test devise sans bon format
