@@ -189,3 +189,4 @@ atlassian-ide-plugin.xml
 
 # Crashlytics plugin (for Android Studio and IntelliJ)
 com_crashlytics_export_strings.xml
+/TAC/FJS/cours1/Node_courses/nbproject/private/
