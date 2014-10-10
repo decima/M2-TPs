@@ -4,7 +4,7 @@ var money = function (v, curr) {
     curr.trim();
     this.v = v;
     this.curr = curr;
-    if (curr.length != 3)
+    if (curr.length > 3)
         throw new DeviseFormatExc(this);
     if (v < 0)
         throw new ValeurNegativeExc(this);
