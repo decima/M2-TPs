@@ -29,6 +29,8 @@ calc.prototype.computeResult = function (form) {
         this.message = e.toString();
 
     }
+
+    document.getElementById("res").innerHTML = this.message;
 };
 
 function doComputation(form, resDiv) {
