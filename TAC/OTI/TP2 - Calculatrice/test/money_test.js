@@ -42,6 +42,14 @@ test("test valeur negatives", 2, function () {
             "Valeur négative");
 
 });
+/*
+throws(
+    function () {
+        new money(1, "EU");
+    },
+    DeviseFormatExc,
+    "caractères < 3.");
+*/
 test("test devise sans bon format", function () {
 
     ok(function () {
@@ -59,12 +67,6 @@ test("test devise sans bon format", function () {
             },
             DeviseFormatExc,
             "espaces interdis.");
-    throws(
-            function () {
-                new money(1, "EU");
-            },
-            DeviseFormatExc,
-            "caractères < 3.");
     ok(function () {
         new money(1, "   EUR  ");
     }, "espaces en début et fin de devise ignorés");
