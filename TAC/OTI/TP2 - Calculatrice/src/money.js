@@ -1,5 +1,3 @@
-
-
 var money = function (v, curr) {
     curr.trim();
     this.v = v;

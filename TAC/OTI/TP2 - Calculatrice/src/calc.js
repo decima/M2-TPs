@@ -8,12 +8,10 @@ calc.prototype.displayResult = function (resultDiv) {
 };
 
 calc.prototype.computeResult = function (form) {
-    //alert("Not the same currency");
     m1 = new money(parseInt(form.elements['v1'].value),
             form.elements['c1'].value);
     m2 = new money(parseInt(form.elements['v2'].value),
             form.elements['c2'].value);
-
     ops = form.elements['ops'].value;
 
     try {
@@ -27,9 +25,7 @@ calc.prototype.computeResult = function (form) {
         }
     } catch (e) {
         this.message = e.toString();
-
     }
-
     document.getElementById("res").innerHTML = this.message;
 };
 
