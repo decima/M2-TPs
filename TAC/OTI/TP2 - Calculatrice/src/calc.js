@@ -18,10 +18,12 @@ calc.prototype.computeResult = function (form) {
         if (ops === "ADD") {
             res = MoneyOps.add(m1, m2);
             this.message = "Result : " + (res.toString()) + "";
-
+        }
+        else if (ops === "SUB") {
+            res = MoneyOps.sub(m1, m2);
+            this.message = "Result : " + (res.toString()) + "";
         } else {
             this.message = "Unsupported operation " + ops + "";
-
         }
     } catch (e) {
         this.message = e.toString();
