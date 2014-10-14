@@ -43,13 +43,13 @@ test("test valeur negatives", 2, function () {
 
 });
 /*
-throws(
-    function () {
-        new money(1, "EU");
-    },
-    DeviseFormatExc,
-    "caractères < 3.");
-*/
+ throws(
+ function () {
+ new money(1, "EU");
+ },
+ DeviseFormatExc,
+ "caractères < 3.");
+ */
 test("test devise sans bon format", function () {
 
     ok(function () {
@@ -72,3 +72,14 @@ test("test devise sans bon format", function () {
     }, "espaces en début et fin de devise ignorés");
 
 });
+
+test("Devises interdites", function () {
+    throws(
+            function () {
+                new money(1, "BGN");
+            },
+            DevisesNonAccepteesExc,
+            "Devises non acceptées");
+});
+
+ 

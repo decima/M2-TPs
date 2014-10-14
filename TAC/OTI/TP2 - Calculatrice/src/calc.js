@@ -1,3 +1,6 @@
+
+
+
 function calc() {
     this.message = "";
 }
@@ -24,6 +27,7 @@ calc.prototype.computeResult = function (form) {
             this.message = "Result : " + (res.toString()) + "";
         } else {
             this.message = "Unsupported operation " + ops + "";
+            throw new OperationInconnueExc(ops);
         }
     } catch (e) {
         this.message = e.toString();
