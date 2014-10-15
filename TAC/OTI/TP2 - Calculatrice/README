@@ -1,0 +1,6 @@
+Florent PEYSSON
+Henri LARGET
+
+* Correction des tests du fichier test/calc_test.js
+* Prise en compte de l'opération SUB
+* Assertion des alertes
